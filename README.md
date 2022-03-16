@@ -46,6 +46,7 @@ psql --username=odosuser --host=127.0.0.1 --port=5432 --dbname=odos --password
 
 - Show DBs: `\l`
 - Use DB: `\c odos`
+- Show users: `\du`
 - Show tables: `\dt`
 - Make DB (see below)
 
@@ -54,4 +55,10 @@ psql --username=odosuser --host=127.0.0.1 --port=5432 --dbname=odos --password
 CREATE DATABASE odos;
 CREATE USER odosuser WITH PASSWORD 'odospassword';
 GRANT ALL PRIVILEGES ON DATABASE odos TO odosuser;
+```
+
+Dropping a user:
+```
+DROP OWNED BY odosuser;
+DROP USER odosuser;
 ```
