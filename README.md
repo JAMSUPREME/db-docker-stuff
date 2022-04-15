@@ -14,6 +14,13 @@ Run mysql:
 docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e -d mysql:latest
 ```
 
+### Older versions
+
+If you want 5.7 (since 8 is not supported everywhere):
+```
+docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e -d mysql:5.7
+```
+
 ## Verify connectivity
 
 ```
@@ -22,8 +29,8 @@ mysql --user=root --host=127.0.0.1 --port=3306 --password
 
 ## Helper commands
 
-- Show DB
-- Show tables
+- Show DB: `show databases;`
+- Show tables `show tables;`
 
 # Postgres
 
